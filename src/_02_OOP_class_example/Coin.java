@@ -1,4 +1,4 @@
-package _02_01_class_example;
+package _02_OOP_class_example;
 
 public class Coin {
     private final int HEADS = 0;

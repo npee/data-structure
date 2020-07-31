@@ -1,10 +1,13 @@
-package _03_01_ArratSet;
+package _03_04_Bingo;
+
+import structures.LinkedSet;
 
 public class Bingo {
     public static void main(String[] args) {
         final int NUM_BALLS = 75, NUM_PULLS = 10;
 
-        ArraySet<BingoBall> bingoSet = new ArraySet<BingoBall>();
+        // ArraySet<BingoBall> bingoSet = new ArraySet<BingoBall>(); // Ch03. ArraySet
+        LinkedSet<BingoBall> bingoSet = new LinkedSet<>(); // Ch04. LinkedSet
         BingoBall ball;
 
         for (int num = 1; num <= NUM_BALLS; num++) {

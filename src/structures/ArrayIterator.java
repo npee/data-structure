@@ -1,4 +1,4 @@
-package _03_01_ArratSet;
+package structures;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

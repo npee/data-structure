@@ -1,6 +1,7 @@
-package _03_01_ArratSet;
+package structures;
 
-import sun.invoke.empty.Empty;
+import structures.exception.ElementNotFoundException;
+import structures.exception.EmptySetException;
 
 import java.util.EmptyStackException;
 import java.util.Iterator;
@@ -61,18 +62,18 @@ public class ArraySet<T> implements SetADT<T> {
     }
 
     @Override
-    public T remove(T element) throws EmptyStackException, NoSuchElementException {
+    public T remove(T element) throws EmptySetException, ElementNotFoundException {
         int search = NOT_FOUND;
 
         if (isEmpty())
-            throw new EmptyStackException();
+            throw new EmptySetException();
 
         for (int index = 0; index < count && search == NOT_FOUND; index++)
             if (contents[index].equals(element))
                 search = index;
 
         if (search == NOT_FOUND)
-            throw new NoSuchElementException();
+            throw new ElementNotFoundException(element.toString());
 
         T result = contents[search];
 
