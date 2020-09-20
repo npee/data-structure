@@ -8,12 +8,14 @@ package _06_Postfix;
 //********************************************************************
 
 import structures.LinkedStack;
+import structures.StackADT;
 
 import java.util.StringTokenizer;
 
 public class PostfixEvaluator {
 
-    private LinkedStack<Integer> stack;
+    // private LinkedStack<Integer> stack;
+    private StackADT<Integer> stack;
 
     public PostfixEvaluator() {
         stack = new LinkedStack<>();
@@ -28,10 +30,7 @@ public class PostfixEvaluator {
         while (tokenizer.hasMoreTokens()) {
             token = tokenizer.nextToken();
             if (isOperator(token)) {
-
-
                 result = evalSingleOp(token.charAt(0), stack.pop(), stack.pop());
-                System.out.println(result);
                 stack.push(result);
             } else {
                 stack.push(Integer.parseInt(token));
