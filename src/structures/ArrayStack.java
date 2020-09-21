@@ -63,6 +63,15 @@ public class ArrayStack<T> implements StackADT<T> {
         return top;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+        for (int scan = 0; scan < top; scan++) {
+            result = result + stack[scan].toString() + "\n";
+        }
+        return result;
+    }
+
     public void expandCapacity() {
         T[] larger = (T[]) new Object[stack.length * 2];
 
