@@ -1,8 +1,6 @@
 package structures;
 
-import sun.invoke.empty.Empty;
-
-import java.util.EmptyStackException;
+import structures.exception.EmptyStackException;
 
 public class LinkedStack<T> implements StackADT<T> {
 
@@ -47,16 +45,30 @@ public class LinkedStack<T> implements StackADT<T> {
 
     @Override
     public T peek() {
-        return null;
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return top.getElement();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return count == 0;
     }
 
     @Override
     public int size() {
-        return 0;
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        LinearNode current = top;
+        while (current != null) {
+            result = result + (current.getElement()).toString() + "\n";
+            current = current.getNext();
+        }
+        return result;
     }
 }
