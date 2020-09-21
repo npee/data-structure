@@ -5,7 +5,6 @@ import structures.exception.EmptySetException;
 
 import java.util.EmptyStackException;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class ArraySet<T> implements SetADT<T> {
