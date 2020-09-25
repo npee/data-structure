@@ -29,6 +29,7 @@ public class LinkedQueue<T> implements QueueADT<T> {
         }
 
         rear = node;
+        count++;
     }
 
     @Override
