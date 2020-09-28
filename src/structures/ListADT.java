@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public interface ListADT<T> {
     public T removeFirst();
-    public T removeLasts();
+    public T removeLast();
     public T remove(T element);
     public T first();
     public T last();
