@@ -1,5 +1,12 @@
 package _10_Maze;
 
+//********************************************************************
+//  Maze.java       Author: Lewis/Chase
+//
+//  Represents a maze of characters. The goal is to get from the
+//  top left corner to the bottom right, following a path of 1s.
+//********************************************************************
+
 public class Maze {
     private final int TRIED = 3;
     private final int PATH = 7;
@@ -47,10 +54,24 @@ public class Maze {
     private boolean valid(int row, int col) {
         boolean result = false;
 
-        if (row >= 0 && row < grid.length && col >= 0 && col < grid[col].length) {
+        if (row >= 0 && row < grid.length && col >= 0 && col < grid[row].length) {
             if (grid[row][col] == 1) {
                 result = true;
             }
+        }
+
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        String result = "\n";
+
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                result += grid[row][col] + " ";
+            }
+            result += "\n";
         }
 
         return result;
