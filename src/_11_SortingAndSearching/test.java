@@ -8,7 +8,9 @@ public class test {
 
         System.out.println(sorts.linearSearch(x, 0, 5, 3));
 
-        sorts.selectionSort(x);
+        printArray(x);
+        // sorts.selectionSort(x);
+        sorts.bubbleSort(x);
         printArray(x);
 
         System.out.println(sorts.binarySearch(x, 0, 5, 3));
