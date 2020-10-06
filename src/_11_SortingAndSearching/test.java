@@ -10,7 +10,8 @@ public class test {
 
         printArray(x);
         // sorts.selectionSort(x);
-        sorts.bubbleSort(x);
+        // sorts.bubbleSort(x);
+        sorts.insertionSort(x);
         printArray(x);
 
         System.out.println(sorts.binarySearch(x, 0, 5, 3));
