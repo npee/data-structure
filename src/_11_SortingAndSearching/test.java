@@ -12,7 +12,8 @@ public class test {
         // sorts.selectionSort(x);
         // sorts.bubbleSort(x);
         // sorts.insertionSort(x);
-        sorts.mergeSort(x, 0, 5);
+        // sorts.mergeSort(x, 0, 5);
+        sorts.quickSort(x, 0, 5);
         printArray(x);
 
         System.out.println(sorts.binarySearch(x, 0, 5, 3));
